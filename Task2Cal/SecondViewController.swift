@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,5 +21,14 @@ class SecondViewController: UIViewController {
     }
 
 
+    //UiTextFiledDelegate
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // keyboard go away
+        textField.resignFirstResponder()
+        return true
+    }// called when 'return' key pressed. return NO to ignore.
+
+    
+    
 }
 
